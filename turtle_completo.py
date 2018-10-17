@@ -300,6 +300,12 @@ def searchBlk(blkHash):
 daemon_q = queue.Queue(maxsize = 1)
 tx_search_q = queue.Queue(maxsize = 1)
 blk_search_q = queue.Queue(maxsize = 1)
+searchAvailable1 = Label(pos_hint = {"x":0.1, "y":0.5}, size_hint = (0.5,None),
+                         color = (0,0,0,1))
+searchAvailable1.text = "Search will be available when the daemon is synched."
+searchAvailable2 = Label(pos_hint = {"x":0.1, "y":0.5}, size_hint = (0.5,None),
+                         color = (0,0,0,1))
+searchAvailable2.text = "Search will be available when the daemon is synched."
 
 ####################################################################################################################
 class Turtle_Completo(App):
@@ -346,7 +352,6 @@ class Turtle_Completo(App):
 ###################################################################################################################
 #get info from Queue update daemon sych status
     def update_SynchStatus(self, dt):
-
         if daemon_q.empty():
             pass
         else:
@@ -356,8 +361,14 @@ class Turtle_Completo(App):
                     self.status_text = "LOCAL:       "+str(Local)+"\nNETWORK: "+str(Network)
                     self.update_Txpool(TxPool)
                     self.update_RecentBlocks(RecentBlk)
+                    self.root.onlyblocksearchscreen.ids.searchtxbutton.disabled = False
+                    self.root.onlyblocksearchscreen.ids.searchblkbutton.disabled = False
                 else:
                     self.status_text = "SYNC...\n\nLOCAL:       "+str(Local)+"\nNETWORK: "+str(Network)
+                    self.root.onlyblocksearchscreen.ids.searchtxbutton.disabled = True
+                    self.root.onlyblocksearchscreen.ids.searchblkbutton.disabled = True
+                    self.root.onlyblocksearchscreen.ids.txsearch_display.add_widget(searchAvailable1)
+                    self.root.onlyblocksearchscreen.ids.blksearch_display.add_widget(searchAvailable2)
             except Exception as e:
                 print("something wrong while updating status and txpool and blks")
                 print(e)
@@ -598,7 +609,8 @@ class Turtle_Completo(App):
         txHash = self.root.onlyblocksearchscreen.ids.searchTx_inputText.text
         txsearchthread = threading.Thread(target = searchTx, args = (txHash,))
         txsearchthread.start()
-        SearchingLabel = Label(text="Searching Transaction...", size_hint= (1, None), height = 50, font_size = 20)
+        SearchingLabel = Label(text="Searching Transaction...", size_hint= (1, None), height = 50, font_size = 20,
+                               color = (0,0,0,0.8))
         self.root.onlyblocksearchscreen.ids.txsearch_display.add_widget(SearchingLabel)
 
     def BlkSchThread(self):
@@ -606,7 +618,8 @@ class Turtle_Completo(App):
         blkHash = self.root.onlyblocksearchscreen.ids.searchBlk_inputText.text
         blkthread = threading.Thread(target = searchBlk, args = (blkHash,))
         blkthread.start()
-        SearchingLabel = Label(text="Searching Block...", size_hint= (1, None), height = 50, font_size = 20)
+        SearchingLabel = Label(text="Searching Block...", size_hint= (1, None), height = 50, font_size = 20,
+                               color = (0,0,0,0.8))
         self.root.onlyblocksearchscreen.ids.blksearch_display.add_widget(SearchingLabel)
 
     def check_search_queue(self, dt):   #for checking search queue has something or not 
@@ -625,14 +638,16 @@ class Turtle_Completo(App):
             self.root.onlyblocksearchscreen.ids.searchTx_inputText.text = hashN
             txsearchthread = threading.Thread(target = searchTx, args = (hashN,))
             txsearchthread.start()
-            SearchingLabel = Label(text="Searching Transaction...", size_hint= (1, None), height = 50, font_size = 20)
+            SearchingLabel = Label(text="Searching Transaction...", size_hint= (1, None), height = 50, font_size = 20,
+                                   color = (0,0,0,0.8))
             self.root.onlyblocksearchscreen.ids.txsearch_display.add_widget(SearchingLabel)
         elif searchType == 'blk':
             self.root.onlyblocksearchscreen.ids.blksearch_display.clear_widgets()
             self.root.onlyblocksearchscreen.ids.searchBlk_inputText.text = hashN
             blkthread = threading.Thread(target = searchBlk, args = (hashN,))
             blkthread.start()
-            SearchingLabel = Label(text="Searching Block...", size_hint= (1, None), height = 50, font_size = 20)
+            SearchingLabel = Label(text="Searching Block...", size_hint= (1, None), height = 50, font_size = 20,
+                                   color = (0,0,0,0.8))
             self.root.onlyblocksearchscreen.ids.blksearch_display.add_widget(SearchingLabel)
 #---------------------------------------------------------------------------------------------------------------
     def start_on_onlyblockexplorer(self):
@@ -648,7 +663,15 @@ class Turtle_Completo(App):
         #get synch status, txpool, recentblks in one thread
         self.trtl_chain_stat_thread.start()
         self.status_text ="SYNC...\n\nLOCAL:     \nNETWORK: "
-        #schedule status update every 10 sec
+
+        #searchable control
+        self.root.onlyblocksearchscreen.ids.searchtxbutton.disabled = True
+        self.root.onlyblocksearchscreen.ids.searchblkbutton.disabled = True
+
+        self.root.onlyblocksearchscreen.ids.txsearch_display.add_widget(searchAvailable1)
+        self.root.onlyblocksearchscreen.ids.blksearch_display.add_widget(searchAvailable2)
+        
+        #schedule status update every 5 sec
         Clock.schedule_interval(self.update_SynchStatus,5)
         Clock.schedule_interval(self.check_search_queue, 0.5)
         self.appIsRunning = True

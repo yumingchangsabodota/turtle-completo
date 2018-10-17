@@ -705,7 +705,9 @@ ScreenManagement:
 	blksearch_display:blksearch_display
 	searchTx_inputText:searchTx_inputText
 	searchBlk_inputText:searchBlk_inputText
-
+	searchblkbutton:searchblkbutton
+	searchtxbutton:searchtxbutton
+	
     BackGround:
         StatusLabel
         SideBar:
@@ -751,6 +753,7 @@ ScreenManagement:
 				hint_text_color: 0,0,0,0.4
 				
 			searchTxButton:
+				id:searchtxbutton
 				size_hint: 0.05,0.035
 				pos_hint:{"x":0.95,"y":0.5}
 				on_release:app.TxSchThread()
@@ -776,6 +779,7 @@ ScreenManagement:
 				hint_text: 'Block hash, or block height'
 				hint_text_color: 0,0,0,0.4
 			searchBlkButton:
+				id:searchblkbutton
 				size_hint: 0.05,0.035
 				pos_hint:{"x":0.95,"y":0}
 				on_release:app.BlkSchThread()

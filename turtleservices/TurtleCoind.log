@@ -1,0 +1,444 @@
+2018-Oct-17 13:46:00.650062 INFO    [daemon] 
+ _______         _   _       _____      _        
+|__   __|       | | | |     / ____|    (_)      
+   | |_   _ _ __| |_| | ___| |     ___  _ _ __  
+   | | | | | '__| __| |/ _ \ |    / _ \| | '_ \ 
+   | | |_| | |  | |_| |  __/ |___| (_) | | | | |
+   |_|\__ _|_|   \__|_|\___|\_____\___/|_|_| |_|
+
+2018-Oct-17 13:46:00.657027 INFO    [daemon] Welcome to TurtleCoin v0.8.3.1275 ()
+2018-Oct-17 13:46:00.659020 INFO    [daemon] Module folder: turtleservices\TurtleCoind.exe
+2018-Oct-17 13:46:00.661014 INFO    [daemon] Loading Checkpoints for faster initial sync...
+2018-Oct-17 13:46:00.663009 INFO    [daemon] Loaded 156 default checkpoints
+2018-Oct-17 13:46:00.665004 INFO    [RocksDBWrapper] Opening DB in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB
+2018-Oct-17 13:46:01.434467 INFO    [RocksDBWrapper] DB opened in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB
+2018-Oct-17 13:46:01.442048 INFO    [daemon] Initializing core...
+2018-Oct-17 13:46:01.516613 INFO    [Core] DB has more blocks than blockchain storage, cutting from block index: 891395
+2018-Oct-17 13:46:01.519605 INFO    [Core] Cutting root segment from index 891395
+2018-Oct-17 13:46:01.734195 INFO    [daemon] Core initialized OK
+2018-Oct-17 13:46:01.736193 INFO    [daemon] Initializing p2p server...
+2018-Oct-17 13:46:01.744206 INFO    [node_server] Binding on 0.0.0.0:11897
+2018-Oct-17 13:46:01.746021 INFO    [node_server] Net service binded on 0.0.0.0:11897
+2018-Oct-17 13:46:01.747701 INFO    [node_server] Attempting to add IGD port mapping.
+2018-Oct-17 13:46:02.872167 ERROR   [node_server] UPNP_AddPortMapping failed.
+2018-Oct-17 13:46:02.877730 INFO    [daemon] P2p server initialized OK
+2018-Oct-17 13:46:02.879724 INFO    [daemon] Starting core rpc server on address 0.0.0.0:11898
+2018-Oct-17 13:46:02.880723 INFO    [daemon] Core rpc server started ok
+2018-Oct-17 13:46:02.881719 INFO    [daemon] Starting p2p net loop...
+2018-Oct-17 13:46:02.882716 INFO    [node_server] Starting node_server
+2018-Oct-17 13:46:06.065958 INFO    [protocol] [138.201.129.138:43309 INC] Your TurtleCoin node is syncing with the network (99.93% complete) You are 629 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:46:06.072758 INFO    [protocol] New Top Block Detected: 892024
+2018-Oct-17 13:46:06.758913 INFO    [protocol] [67.241.164.207:11897 OUT] Your TurtleCoin node is syncing with the network (99.93% complete) You are 629 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:46:07.595479 WARNING [node_server] [88.214.241.183:11897 OUT] COMMAND_HANDSHAKE Warning, our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:46:07.601808 INFO    [protocol] [88.214.241.183:11897 OUT] Your TurtleCoin node is syncing with the network (99.93% complete) You are 629 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:46:12.678125 INFO    [Core] Block 891400 (1881950f56824a0d4c381b3c006957083b5e2979f2a56a25015dcabaf8485585) added to main chain
+2018-Oct-17 13:46:15.570142 INFO    [protocol] [94.177.236.16:11897 OUT] Your TurtleCoin node is syncing with the network (99.94% complete) You are 573 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:46:20.800077 INFO    [protocol] [54.39.16.195:11897 OUT] Your TurtleCoin node is syncing with the network (99.94% complete) You are 539 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:46:23.414038 WARNING [node_server] [51.15.204.35:45660 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:46:23.414038 INFO    [protocol] [51.15.204.35:45660 INC] Your TurtleCoin node is syncing with the network (99.94% complete) You are 529 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:46:23.429630 WARNING [node_server] [199.247.20.52:59853 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:46:23.429630 INFO    [protocol] [199.247.20.52:59853 INC] Your TurtleCoin node is syncing with the network (99.94% complete) You are 529 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:46:25.172679 INFO    [protocol] [192.121.108.70:11897 OUT] Your TurtleCoin node is syncing with the network (99.94% complete) You are 528 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:46:27.553010 INFO    [Core] Block 891500 (ac72daaa25c3de00339861bd84d3d1afc1e8900e2d78c54e4ba4b10540adee7c) added to main chain
+2018-Oct-17 13:46:28.002563 WARNING [node_server] [104.128.233.34:40794 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:46:28.019967 INFO    [protocol] [104.128.233.34:40794 INC] Your TurtleCoin node is syncing with the network (99.94% complete) You are 515 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:46:32.562675 INFO    [protocol] [116.52.86.141:61032 INC] Your TurtleCoin node is syncing with the network (99.94% complete) You are 507 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:46:35.650656 INFO    [protocol] [138.201.129.138:48835 INC] Your TurtleCoin node is syncing with the network (99.94% complete) You are 502 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:46:38.990457 INFO    [protocol] [64.191.161.210:56549 INC] Your TurtleCoin node is syncing with the network (99.94% complete) You are 498 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:46:41.442105 WARNING [node_server] [51.15.204.35:54348 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:46:41.442105 INFO    [protocol] [51.15.204.35:54348 INC] Your TurtleCoin node is syncing with the network (99.95% complete) You are 429 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:46:41.984437 WARNING [node_server] [36.72.29.25:11897 OUT] COMMAND_HANDSHAKE Warning, our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:46:41.984437 INFO    [protocol] [36.72.29.25:11897 OUT] Your TurtleCoin node is syncing with the network (99.95% complete) You are 429 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:46:42.930020 INFO    [Core] Block 891600 (a52286f5825bdafa582fad298ffc102db33313d8fe68f0e1fc3259f628a90aad) added to main chain
+2018-Oct-17 13:46:43.258065 WARNING [node_server] [188.146.162.82:52889 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:46:43.273686 INFO    [protocol] 
+2018-Oct-17 13:46:43.273686 INFO    [protocol] ===[ TurtleCoin Tip! ]=============================
+2018-Oct-17 13:46:43.273686 INFO    [protocol]  Always exit TurtleCoind and zedwallet with the "exit" command to preserve your chain and wallet data.
+2018-Oct-17 13:46:43.273686 INFO    [protocol]  Use the "help" command to see a list of available commands.
+2018-Oct-17 13:46:43.273686 INFO    [protocol]  Use the "export_keys" command in zedwallet to display your keys for restoring a corrupted wallet.
+2018-Oct-17 13:46:43.273686 INFO    [protocol]  If you need more assistance, visit the #HELP channel in the TurtleCoin Discord Chat - http://chat.turtlecoin.lol
+2018-Oct-17 13:46:43.273686 INFO    [protocol] ===================================================
+2018-Oct-17 13:46:43.273686 INFO    [protocol] 
+2018-Oct-17 13:46:43.289307 INFO    [protocol] 
+ _______         _   _       _____      _        
+|__   __|       | | | |     / ____|    (_)      
+   | |_   _ _ __| |_| | ___| |     ___  _ _ __  
+   | | | | | '__| __| |/ _ \ |    / _ \| | '_ \ 
+   | | |_| | |  | |_| |  __/ |___| (_) | | | | |
+   |_|\__ _|_|   \__|_|\___|\_____\___/|_|_| |_|
+
+2018-Oct-17 13:46:43.320551 WARNING [node_server] [199.247.20.52:60915 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:46:43.320551 INFO    [protocol] [199.247.20.52:60915 INC] Your TurtleCoin node is syncing with the network (99.95% complete) You are 415 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:46:47.330241 INFO    [protocol] [46.10.208.23:51593 INC] Your TurtleCoin node is syncing with the network (99.96% complete) You are 394 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:46:48.986501 INFO    [daemon] 
+ _______         _   _       _____      _        
+|__   __|       | | | |     / ____|    (_)      
+   | |_   _ _ __| |_| | ___| |     ___  _ _ __  
+   | | | | | '__| __| |/ _ \ |    / _ \| | '_ \ 
+   | | |_| | |  | |_| |  __/ |___| (_) | | | | |
+   |_|\__ _|_|   \__|_|\___|\_____\___/|_|_| |_|
+
+2018-Oct-17 13:46:48.992457 INFO    [daemon] Welcome to TurtleCoin v0.8.3.1275 ()
+2018-Oct-17 13:46:48.993477 INFO    [daemon] Module folder: turtleservices\TurtleCoind.exe
+2018-Oct-17 13:46:48.995446 INFO    [daemon] Loading Checkpoints for faster initial sync...
+2018-Oct-17 13:46:48.997440 INFO    [daemon] Loaded 156 default checkpoints
+2018-Oct-17 13:46:48.999462 INFO    [RocksDBWrapper] Opening DB in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB
+2018-Oct-17 13:46:49.017392 ERROR   [RocksDBWrapper] DB Error. DB can't be opened in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB. Error: IO error: Failed to create lock file: C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB/LOCK: The process cannot access the file because it is being used by another process.
+
+2018-Oct-17 13:46:49.023370 ERROR   [daemon] Exception: IO error
+2018-Oct-17 13:46:50.429682 WARNING [node_server] [83.135.72.246:11897 OUT] COMMAND_HANDSHAKE Warning, our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:46:50.434920 INFO    [protocol] [83.135.72.246:11897 OUT] Your TurtleCoin node is syncing with the network (99.96% complete) You are 329 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:46:52.026212 INFO    [Core] Block 891700 (8fb120741a90d6d19deca4ed111405460aa8e730f4051dcce9c3cccd9a8447a1) added to main chain
+2018-Oct-17 13:46:52.326924 INFO    [protocol] [95.175.1.93:14602 INC] Your TurtleCoin node is syncing with the network (99.96% complete) You are 314 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:46:53.014539 WARNING [node_server] [104.128.233.34:60345 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:46:53.017645 INFO    [protocol] [104.128.233.34:60345 INC] Your TurtleCoin node is syncing with the network (99.97% complete) You are 294 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:46:55.335401 INFO    [protocol] [86.132.120.116:53376 INC] Your TurtleCoin node is syncing with the network (99.97% complete) You are 261 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:46:57.934631 INFO    [Core] Block 891800 (c33e31ffcfeab14d736a0c3dd04d4bf8e3a57087f535656a3f4f5c90c8204a10) added to main chain
+2018-Oct-17 13:46:59.918111 WARNING [node_server] [51.15.204.35:39621 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:46:59.921103 INFO    [protocol] [51.15.204.35:39621 INC] Your TurtleCoin node is syncing with the network (99.98% complete) You are 195 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:47:05.309425 INFO    [protocol] [138.201.129.138:51329 INC] Your TurtleCoin node is syncing with the network (99.99% complete) You are 129 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 13:47:05.562682 INFO    [Core] Block 891900 (f030bec6dc13411a682946808ef00bbc906563a96292e0577e55bbe6a761e6eb) added to main chain
+2018-Oct-17 13:47:09.921689 INFO    [Core] Block 892000 (cb3acf7ecdb7123b032ae20ac3023b9a32e32fef0cfdbf680cb9ecb525081b3b) added to main chain
+2018-Oct-17 13:47:10.852069 INFO    [protocol] [88.214.241.183:11897 OUT] Successfully synchronized with the TurtleCoin Network.
+2018-Oct-17 13:47:15.612195 WARNING [node_server] [51.15.204.35:44904 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:47:21.065554 INFO    [protocol] New Top Block Detected: 892025
+2018-Oct-17 13:47:25.644578 WARNING [node_server] [104.128.233.34:55157 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:47:27.719957 INFO    [protocol] New Top Block Detected: 892026
+2018-Oct-17 13:47:37.765961 WARNING [node_server] [199.247.20.52:35875 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:47:38.234825 WARNING [node_server] [51.15.204.35:43795 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:47:54.967203 WARNING [node_server] [188.146.162.82:52932 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:48:02.152559 INFO    [protocol] New Top Block Detected: 892027
+2018-Oct-17 13:48:50.936991 WARNING [node_server] [199.247.20.52:52003 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:48:52.208794 WARNING [node_server] [104.128.233.34:58299 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:49:06.645665 INFO    [protocol] New Top Block Detected: 892028
+2018-Oct-17 13:49:23.755402 WARNING [node_server] [104.128.233.34:53119 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:49:27.550769 WARNING [node_server] [51.15.204.35:58378 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:49:48.638185 WARNING [node_server] [51.15.204.35:37805 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:50:00.300356 WARNING [node_server] [104.128.233.34:54591 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:50:06.730164 WARNING [node_server] [51.15.204.35:44550 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:50:08.974971 INFO    [protocol] New Top Block Detected: 892029
+2018-Oct-17 13:50:22.336109 WARNING [node_server] [51.15.204.35:33756 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:50:48.949105 WARNING [node_server] [104.128.233.34:60605 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:50:49.308634 INFO    [protocol] New Top Block Detected: 892030
+2018-Oct-17 13:51:17.563237 WARNING [node_server] [199.247.20.52:58272 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:51:25.327144 WARNING [node_server] [104.128.233.34:48413 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:51:36.634250 INFO    [daemon] 
+ _______         _   _       _____      _        
+|__   __|       | | | |     / ____|    (_)      
+   | |_   _ _ __| |_| | ___| |     ___  _ _ __  
+   | | | | | '__| __| |/ _ \ |    / _ \| | '_ \ 
+   | | |_| | |  | |_| |  __/ |___| (_) | | | | |
+   |_|\__ _|_|   \__|_|\___|\_____\___/|_|_| |_|
+
+2018-Oct-17 13:51:36.641201 INFO    [daemon] Welcome to TurtleCoin v0.8.3.1275 ()
+2018-Oct-17 13:51:36.643335 INFO    [daemon] Module folder: turtleservices\TurtleCoind.exe
+2018-Oct-17 13:51:36.644331 INFO    [daemon] Loading Checkpoints for faster initial sync...
+2018-Oct-17 13:51:36.646326 INFO    [daemon] Loaded 156 default checkpoints
+2018-Oct-17 13:51:36.648320 INFO    [RocksDBWrapper] Opening DB in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB
+2018-Oct-17 13:51:36.664347 ERROR   [RocksDBWrapper] DB Error. DB can't be opened in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB. Error: IO error: Failed to create lock file: C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB/LOCK: The process cannot access the file because it is being used by another process.
+
+2018-Oct-17 13:51:36.669334 ERROR   [daemon] Exception: IO error
+2018-Oct-17 13:51:36.833458 WARNING [node_server] [51.15.204.35:54206 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:51:42.551254 INFO    [protocol] New Top Block Detected: 892031
+2018-Oct-17 13:51:42.873547 WARNING [node_server] [199.247.20.52:43917 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:52:07.036683 INFO    [protocol] New Top Block Detected: 892032
+2018-Oct-17 13:52:13.448718 INFO    [protocol] New Top Block Detected: 892033
+2018-Oct-17 13:52:20.641481 INFO    [protocol] New Top Block Detected: 892034
+2018-Oct-17 13:52:23.227523 WARNING [node_server] [51.15.204.35:56311 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:52:44.411611 INFO    [protocol] New Top Block Detected: 892035
+2018-Oct-17 13:52:44.910899 WARNING [node_server] [104.128.233.34:55730 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:52:46.524995 WARNING [node_server] [51.15.204.35:38526 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:53:16.903583 WARNING [node_server] [104.128.233.34:45805 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:53:22.565820 INFO    [protocol] New Top Block Detected: 892036
+2018-Oct-17 13:53:24.245180 INFO    [daemon] 
+ _______         _   _       _____      _        
+|__   __|       | | | |     / ____|    (_)      
+   | |_   _ _ __| |_| | ___| |     ___  _ _ __  
+   | | | | | '__| __| |/ _ \ |    / _ \| | '_ \ 
+   | | |_| | |  | |_| |  __/ |___| (_) | | | | |
+   |_|\__ _|_|   \__|_|\___|\_____\___/|_|_| |_|
+
+2018-Oct-17 13:53:24.252209 INFO    [daemon] Welcome to TurtleCoin v0.8.3.1275 ()
+2018-Oct-17 13:53:24.253205 INFO    [daemon] Module folder: turtleservices\TurtleCoind.exe
+2018-Oct-17 13:53:24.254203 INFO    [daemon] Loading Checkpoints for faster initial sync...
+2018-Oct-17 13:53:24.255200 INFO    [daemon] Loaded 156 default checkpoints
+2018-Oct-17 13:53:24.256197 INFO    [RocksDBWrapper] Opening DB in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB
+2018-Oct-17 13:53:24.273153 ERROR   [RocksDBWrapper] DB Error. DB can't be opened in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB. Error: IO error: Failed to create lock file: C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB/LOCK: The process cannot access the file because it is being used by another process.
+
+2018-Oct-17 13:53:24.279138 ERROR   [daemon] Exception: IO error
+2018-Oct-17 13:53:25.829124 INFO    [protocol] New Top Block Detected: 892037
+2018-Oct-17 13:53:30.123743 WARNING [node_server] [51.15.204.35:47913 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:53:36.213850 INFO    [protocol] New Top Block Detected: 892038
+2018-Oct-17 13:53:47.378871 INFO    [protocol] New Top Block Detected: 892039
+2018-Oct-17 13:53:48.206357 WARNING [node_server] [51.15.204.35:42017 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:53:54.447638 WARNING [node_server] [199.247.20.52:37790 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:53:54.755335 WARNING [node_server] [104.128.233.34:41229 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:54:01.301271 INFO    [protocol] New Top Block Detected: 892040
+2018-Oct-17 13:54:11.741086 WARNING [node_server] [51.15.204.35:40558 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:54:14.192537 INFO    [protocol] New Top Block Detected: 892041
+2018-Oct-17 13:54:19.870678 WARNING [node_server] [104.128.233.34:55256 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:54:52.614431 INFO    [protocol] New Top Block Detected: 892042
+2018-Oct-17 13:55:11.033789 INFO    [daemon] 
+ _______         _   _       _____      _        
+|__   __|       | | | |     / ____|    (_)      
+   | |_   _ _ __| |_| | ___| |     ___  _ _ __  
+   | | | | | '__| __| |/ _ \ |    / _ \| | '_ \ 
+   | | |_| | |  | |_| |  __/ |___| (_) | | | | |
+   |_|\__ _|_|   \__|_|\___|\_____\___/|_|_| |_|
+
+2018-Oct-17 13:55:11.039827 INFO    [daemon] Welcome to TurtleCoin v0.8.3.1275 ()
+2018-Oct-17 13:55:11.040825 INFO    [daemon] Module folder: turtleservices\TurtleCoind.exe
+2018-Oct-17 13:55:11.041823 INFO    [daemon] Loading Checkpoints for faster initial sync...
+2018-Oct-17 13:55:11.042821 INFO    [daemon] Loaded 156 default checkpoints
+2018-Oct-17 13:55:11.043818 INFO    [RocksDBWrapper] Opening DB in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB
+2018-Oct-17 13:55:11.064763 ERROR   [RocksDBWrapper] DB Error. DB can't be opened in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB. Error: IO error: Failed to create lock file: C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB/LOCK: The process cannot access the file because it is being used by another process.
+
+2018-Oct-17 13:55:11.071744 ERROR   [daemon] Exception: IO error
+2018-Oct-17 13:55:22.117887 WARNING [node_server] [104.128.233.34:57331 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:56:13.490383 WARNING [node_server] [104.128.233.34:33834 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:56:15.938141 WARNING [node_server] [199.247.20.52:51725 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:56:48.467608 INFO    [protocol] New Top Block Detected: 892043
+2018-Oct-17 13:56:50.736508 WARNING [node_server] [199.247.20.52:52624 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:56:53.167782 INFO    [protocol] New Top Block Detected: 892044
+2018-Oct-17 13:57:04.423251 INFO    [daemon] 
+ _______         _   _       _____      _        
+|__   __|       | | | |     / ____|    (_)      
+   | |_   _ _ __| |_| | ___| |     ___  _ _ __  
+   | | | | | '__| __| |/ _ \ |    / _ \| | '_ \ 
+   | | |_| | |  | |_| |  __/ |___| (_) | | | | |
+   |_|\__ _|_|   \__|_|\___|\_____\___/|_|_| |_|
+
+2018-Oct-17 13:57:04.431192 INFO    [daemon] Welcome to TurtleCoin v0.8.3.1275 ()
+2018-Oct-17 13:57:04.432189 INFO    [daemon] Module folder: turtleservices\TurtleCoind.exe
+2018-Oct-17 13:57:04.433187 INFO    [daemon] Loading Checkpoints for faster initial sync...
+2018-Oct-17 13:57:04.434184 INFO    [daemon] Loaded 156 default checkpoints
+2018-Oct-17 13:57:04.435181 INFO    [RocksDBWrapper] Opening DB in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB
+2018-Oct-17 13:57:04.457568 ERROR   [RocksDBWrapper] DB Error. DB can't be opened in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB. Error: IO error: Failed to create lock file: C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB/LOCK: The process cannot access the file because it is being used by another process.
+
+2018-Oct-17 13:57:04.465027 ERROR   [daemon] Exception: IO error
+2018-Oct-17 13:57:13.761667 WARNING [node_server] [51.15.204.35:37302 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:57:24.991734 INFO    [protocol] New Top Block Detected: 892045
+2018-Oct-17 13:57:33.599255 WARNING [node_server] [51.15.204.35:43913 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:57:36.479735 INFO    [protocol] New Top Block Detected: 892046
+2018-Oct-17 13:57:58.974887 WARNING [node_server] [51.15.204.35:47773 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:58:10.383926 INFO    [daemon] 
+ _______         _   _       _____      _        
+|__   __|       | | | |     / ____|    (_)      
+   | |_   _ _ __| |_| | ___| |     ___  _ _ __  
+   | | | | | '__| __| |/ _ \ |    / _ \| | '_ \ 
+   | | |_| | |  | |_| |  __/ |___| (_) | | | | |
+   |_|\__ _|_|   \__|_|\___|\_____\___/|_|_| |_|
+
+2018-Oct-17 13:58:10.390993 INFO    [daemon] Welcome to TurtleCoin v0.8.3.1275 ()
+2018-Oct-17 13:58:10.392987 INFO    [daemon] Module folder: turtleservices\TurtleCoind.exe
+2018-Oct-17 13:58:10.393984 INFO    [daemon] Loading Checkpoints for faster initial sync...
+2018-Oct-17 13:58:10.396977 INFO    [daemon] Loaded 156 default checkpoints
+2018-Oct-17 13:58:10.398972 INFO    [RocksDBWrapper] Opening DB in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB
+2018-Oct-17 13:58:10.415058 ERROR   [RocksDBWrapper] DB Error. DB can't be opened in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB. Error: IO error: Failed to create lock file: C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB/LOCK: The process cannot access the file because it is being used by another process.
+
+2018-Oct-17 13:58:10.420521 ERROR   [daemon] Exception: IO error
+2018-Oct-17 13:58:11.570657 INFO    [protocol] New Top Block Detected: 892047
+2018-Oct-17 13:58:23.160143 WARNING [node_server] [51.15.204.35:54631 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:58:37.291184 INFO    [protocol] New Top Block Detected: 892048
+2018-Oct-17 13:58:42.751757 WARNING [node_server] [51.15.204.35:47793 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:58:52.059809 INFO    [protocol] New Top Block Detected: 892049
+2018-Oct-17 13:58:55.595063 INFO    [protocol] New Top Block Detected: 892050
+2018-Oct-17 13:58:55.849045 WARNING [node_server] [199.247.20.52:59184 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:59:05.746668 INFO    [protocol] New Top Block Detected: 892051
+2018-Oct-17 13:59:21.454044 WARNING [node_server] [104.128.233.34:37912 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 13:59:28.676851 INFO    [protocol] New Top Block Detected: 892052
+2018-Oct-17 13:59:37.426172 INFO    [daemon] 
+ _______         _   _       _____      _        
+|__   __|       | | | |     / ____|    (_)      
+   | |_   _ _ __| |_| | ___| |     ___  _ _ __  
+   | | | | | '__| __| |/ _ \ |    / _ \| | '_ \ 
+   | | |_| | |  | |_| |  __/ |___| (_) | | | | |
+   |_|\__ _|_|   \__|_|\___|\_____\___/|_|_| |_|
+
+2018-Oct-17 13:59:37.434172 INFO    [daemon] Welcome to TurtleCoin v0.8.3.1275 ()
+2018-Oct-17 13:59:37.435168 INFO    [daemon] Module folder: turtleservices\TurtleCoind.exe
+2018-Oct-17 13:59:37.436166 INFO    [daemon] Loading Checkpoints for faster initial sync...
+2018-Oct-17 13:59:37.438160 INFO    [daemon] Loaded 156 default checkpoints
+2018-Oct-17 13:59:37.439157 INFO    [RocksDBWrapper] Opening DB in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB
+2018-Oct-17 13:59:37.455193 ERROR   [RocksDBWrapper] DB Error. DB can't be opened in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB. Error: IO error: Failed to create lock file: C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB/LOCK: The process cannot access the file because it is being used by another process.
+
+2018-Oct-17 13:59:37.459887 ERROR   [daemon] Exception: IO error
+2018-Oct-17 13:59:37.837270 INFO    [protocol] New Top Block Detected: 892053
+2018-Oct-17 14:00:00.292381 INFO    [protocol] New Top Block Detected: 892054
+2018-Oct-17 14:00:12.850665 WARNING [node_server] [199.247.20.52:47754 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:00:26.025065 WARNING [node_server] [104.128.233.34:58426 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:00:26.468793 WARNING [node_server] [51.15.204.35:46844 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:00:50.637399 WARNING [node_server] [51.15.204.35:33301 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:00:55.211011 WARNING [node_server] [104.128.233.34:34176 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:01:01.229018 INFO    [protocol] New Top Block Detected: 892055
+2018-Oct-17 14:01:12.582644 WARNING [node_server] [51.15.204.35:50996 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:01:17.276423 WARNING [node_server] [199.247.20.52:55844 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:01:30.894641 INFO    [protocol] New Top Block Detected: 892056
+2018-Oct-17 14:01:31.599220 WARNING [node_server] [104.128.233.34:43369 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:01:40.487616 WARNING [node_server] [51.15.204.35:39081 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:01:45.676767 INFO    [protocol] New Top Block Detected: 892057
+2018-Oct-17 14:01:48.062830 WARNING [node_server] [199.247.20.52:58477 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:01:58.984598 INFO    [protocol] New Top Block Detected: 892058
+2018-Oct-17 14:02:02.547518 WARNING [node_server] [51.15.204.35:54568 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:02:12.908149 INFO    [daemon] 
+ _______         _   _       _____      _        
+|__   __|       | | | |     / ____|    (_)      
+   | |_   _ _ __| |_| | ___| |     ___  _ _ __  
+   | | | | | '__| __| |/ _ \ |    / _ \| | '_ \ 
+   | | |_| | |  | |_| |  __/ |___| (_) | | | | |
+   |_|\__ _|_|   \__|_|\___|\_____\___/|_|_| |_|
+
+2018-Oct-17 14:02:12.914572 INFO    [daemon] Welcome to TurtleCoin v0.8.3.1275 ()
+2018-Oct-17 14:02:12.916567 INFO    [daemon] Module folder: turtleservices\TurtleCoind.exe
+2018-Oct-17 14:02:12.917564 INFO    [daemon] Loading Checkpoints for faster initial sync...
+2018-Oct-17 14:02:12.919559 INFO    [daemon] Loaded 156 default checkpoints
+2018-Oct-17 14:02:12.921560 INFO    [RocksDBWrapper] Opening DB in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB
+2018-Oct-17 14:02:12.937374 ERROR   [RocksDBWrapper] DB Error. DB can't be opened in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB. Error: IO error: Failed to create lock file: C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB/LOCK: The process cannot access the file because it is being used by another process.
+
+2018-Oct-17 14:02:12.944355 ERROR   [daemon] Exception: IO error
+2018-Oct-17 14:02:19.539487 WARNING [node_server] [51.15.204.35:42542 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:02:47.386344 WARNING [node_server] [104.128.233.34:45182 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:03:07.388638 INFO    [protocol] New Top Block Detected: 892059
+2018-Oct-17 14:03:13.929435 INFO    [protocol] New Top Block Detected: 892060
+2018-Oct-17 14:03:22.390980 WARNING [node_server] [104.128.233.34:55821 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:03:23.863092 INFO    [protocol] New Top Block Detected: 892061
+2018-Oct-17 14:03:36.508161 INFO    [daemon] 
+ _______         _   _       _____      _        
+|__   __|       | | | |     / ____|    (_)      
+   | |_   _ _ __| |_| | ___| |     ___  _ _ __  
+   | | | | | '__| __| |/ _ \ |    / _ \| | '_ \ 
+   | | |_| | |  | |_| |  __/ |___| (_) | | | | |
+   |_|\__ _|_|   \__|_|\___|\_____\___/|_|_| |_|
+
+2018-Oct-17 14:03:36.515123 INFO    [daemon] Welcome to TurtleCoin v0.8.3.1275 ()
+2018-Oct-17 14:03:36.516105 INFO    [daemon] Module folder: turtleservices\TurtleCoind.exe
+2018-Oct-17 14:03:36.517103 INFO    [daemon] Loading Checkpoints for faster initial sync...
+2018-Oct-17 14:03:36.519098 INFO    [daemon] Loaded 156 default checkpoints
+2018-Oct-17 14:03:36.520095 INFO    [RocksDBWrapper] Opening DB in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB
+2018-Oct-17 14:03:36.536085 ERROR   [RocksDBWrapper] DB Error. DB can't be opened in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB. Error: IO error: Failed to create lock file: C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB/LOCK: The process cannot access the file because it is being used by another process.
+
+2018-Oct-17 14:03:36.544032 ERROR   [daemon] Exception: IO error
+2018-Oct-17 14:03:56.265436 INFO    [protocol] New Top Block Detected: 892062
+2018-Oct-17 14:03:57.224395 WARNING [node_server] [199.247.20.52:50564 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:04:08.405643 INFO    [protocol] New Top Block Detected: 892063
+2018-Oct-17 14:04:28.886092 WARNING [node_server] [51.15.204.35:41091 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:04:29.339119 INFO    [protocol] New Top Block Detected: 892064
+2018-Oct-17 14:04:30.654757 INFO    [protocol] New Top Block Detected: 892065
+2018-Oct-17 14:04:42.292341 INFO    [protocol] New Top Block Detected: 892066
+2018-Oct-17 14:04:50.553173 INFO    [protocol] New Top Block Detected: 892067
+2018-Oct-17 14:04:51.115776 WARNING [node_server] [51.15.204.35:54803 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:04:58.567369 INFO    [protocol] New Top Block Detected: 892068
+2018-Oct-17 14:05:05.804067 WARNING [node_server] [104.128.233.34:40947 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:05:19.998832 INFO    [protocol] New Top Block Detected: 892069
+2018-Oct-17 14:05:21.114717 WARNING [node_server] [199.247.20.52:45221 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:05:21.770984 WARNING [node_server] [51.15.204.35:34089 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:05:30.576537 INFO    [daemon] 
+ _______         _   _       _____      _        
+|__   __|       | | | |     / ____|    (_)      
+   | |_   _ _ __| |_| | ___| |     ___  _ _ __  
+   | | | | | '__| __| |/ _ \ |    / _ \| | '_ \ 
+   | | |_| | |  | |_| |  __/ |___| (_) | | | | |
+   |_|\__ _|_|   \__|_|\___|\_____\___/|_|_| |_|
+
+2018-Oct-17 14:05:30.582513 INFO    [daemon] Welcome to TurtleCoin v0.8.3.1275 ()
+2018-Oct-17 14:05:30.583510 INFO    [daemon] Module folder: turtleservices\TurtleCoind.exe
+2018-Oct-17 14:05:30.585478 INFO    [daemon] Loading Checkpoints for faster initial sync...
+2018-Oct-17 14:05:30.587478 INFO    [daemon] Loaded 156 default checkpoints
+2018-Oct-17 14:05:30.589469 INFO    [RocksDBWrapper] Opening DB in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB
+2018-Oct-17 14:05:30.605431 ERROR   [RocksDBWrapper] DB Error. DB can't be opened in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB. Error: IO error: Failed to create lock file: C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB/LOCK: The process cannot access the file because it is being used by another process.
+
+2018-Oct-17 14:05:30.610439 ERROR   [daemon] Exception: IO error
+2018-Oct-17 14:05:48.231045 WARNING [node_server] [51.15.204.35:34533 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:06:06.911290 INFO    [protocol] New Top Block Detected: 892070
+2018-Oct-17 14:06:42.167452 WARNING [node_server] [104.128.233.34:38274 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:06:53.222206 WARNING [node_server] [199.247.20.52:59553 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:07:12.313738 WARNING [node_server] [104.128.233.34:55440 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:07:13.530467 WARNING [node_server] [199.247.20.52:60694 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:07:51.844237 INFO    [protocol] New Top Block Detected: 892071
+2018-Oct-17 14:07:52.435064 WARNING [node_server] [104.128.233.34:36660 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:08:10.866689 WARNING [node_server] [51.15.204.35:47907 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:08:28.818177 WARNING [node_server] [51.15.204.35:55782 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:08:33.466359 INFO    [daemon] 
+ _______         _   _       _____      _        
+|__   __|       | | | |     / ____|    (_)      
+   | |_   _ _ __| |_| | ___| |     ___  _ _ __  
+   | | | | | '__| __| |/ _ \ |    / _ \| | '_ \ 
+   | | |_| | |  | |_| |  __/ |___| (_) | | | | |
+   |_|\__ _|_|   \__|_|\___|\_____\___/|_|_| |_|
+
+2018-Oct-17 14:08:33.474170 INFO    [daemon] Welcome to TurtleCoin v0.8.3.1275 ()
+2018-Oct-17 14:08:33.475167 INFO    [daemon] Module folder: turtleservices\TurtleCoind.exe
+2018-Oct-17 14:08:33.477161 INFO    [daemon] Loading Checkpoints for faster initial sync...
+2018-Oct-17 14:08:33.480155 INFO    [daemon] Loaded 156 default checkpoints
+2018-Oct-17 14:08:33.482181 INFO    [RocksDBWrapper] Opening DB in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB
+2018-Oct-17 14:08:33.503170 ERROR   [RocksDBWrapper] DB Error. DB can't be opened in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB. Error: IO error: Failed to create lock file: C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB/LOCK: The process cannot access the file because it is being used by another process.
+
+2018-Oct-17 14:08:33.508157 ERROR   [daemon] Exception: IO error
+2018-Oct-17 14:08:34.127431 WARNING [node_server] [104.128.233.34:39265 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:08:48.703985 WARNING [node_server] [51.15.204.35:52921 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:09:06.929138 WARNING [node_server] [104.128.233.34:51341 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:09:18.912050 WARNING [node_server] [199.247.20.52:46034 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:09:33.161725 INFO    [protocol] New Top Block Detected: 892072
+2018-Oct-17 14:09:38.701528 INFO    [protocol] New Top Block Detected: 892073
+2018-Oct-17 14:09:51.928386 INFO    [protocol] New Top Block Detected: 892074
+2018-Oct-17 14:10:06.729612 INFO    [protocol] [46.10.208.23:52572 INC] Your TurtleCoin node is syncing with the network (100.00% complete) You are 0 blocks (0 days) behind the current peer you're connected to. Slow and steady wins the race! 
+2018-Oct-17 14:10:08.489424 WARNING [node_server] [199.247.20.52:37601 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:10:14.867507 INFO    [protocol] New Top Block Detected: 892075
+2018-Oct-17 14:10:36.020819 WARNING [node_server] [104.128.233.34:48767 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:11:04.887061 WARNING [node_server] [199.247.20.52:37957 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:11:26.447262 WARNING [node_server] [51.15.204.35:52115 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:11:42.107085 INFO    [protocol] New Top Block Detected: 892076
+2018-Oct-17 14:11:48.823637 WARNING [node_server] [51.15.204.35:37335 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:11:59.303074 INFO    [protocol] New Top Block Detected: 892077
+2018-Oct-17 14:12:15.579018 WARNING [node_server] [104.128.233.34:35011 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:12:34.658795 WARNING [node_server] [51.15.204.35:59937 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:12:42.065124 INFO    [protocol] New Top Block Detected: 892078
+2018-Oct-17 14:12:53.069001 WARNING [node_server] [51.15.204.35:56047 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:13:00.252615 WARNING [node_server] [199.247.20.52:54447 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:13:04.162761 WARNING [node_server] [104.128.233.34:60759 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:13:19.530885 WARNING [node_server] [51.15.204.35:45040 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:13:30.847285 INFO    [protocol] New Top Block Detected: 892079
+2018-Oct-17 14:13:39.678946 WARNING [node_server] [104.128.233.34:38072 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:13:56.816424 WARNING [node_server] [51.15.204.35:43007 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:14:16.532266 WARNING [node_server] [51.15.204.35:52470 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:14:16.594757 WARNING [node_server] [199.247.20.52:43788 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:14:31.470800 WARNING [node_server] [104.128.233.34:41102 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:14:39.225698 WARNING [node_server] [51.15.204.35:38475 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:14:52.562233 INFO    [protocol] New Top Block Detected: 892080
+2018-Oct-17 14:14:59.444426 WARNING [node_server] [51.15.204.35:37158 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:15:13.527469 INFO    [daemon] 
+ _______         _   _       _____      _        
+|__   __|       | | | |     / ____|    (_)      
+   | |_   _ _ __| |_| | ___| |     ___  _ _ __  
+   | | | | | '__| __| |/ _ \ |    / _ \| | '_ \ 
+   | | |_| | |  | |_| |  __/ |___| (_) | | | | |
+   |_|\__ _|_|   \__|_|\___|\_____\___/|_|_| |_|
+
+2018-Oct-17 14:15:13.532508 INFO    [daemon] Welcome to TurtleCoin v0.8.3.1275 ()
+2018-Oct-17 14:15:13.533505 INFO    [daemon] Module folder: turtleservices\TurtleCoind.exe
+2018-Oct-17 14:15:13.534503 INFO    [daemon] Loading Checkpoints for faster initial sync...
+2018-Oct-17 14:15:13.536498 INFO    [daemon] Loaded 156 default checkpoints
+2018-Oct-17 14:15:13.537495 INFO    [RocksDBWrapper] Opening DB in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB
+2018-Oct-17 14:15:13.548232 ERROR   [RocksDBWrapper] DB Error. DB can't be opened in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB. Error: IO error: Failed to create lock file: C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB/LOCK: The process cannot access the file because it is being used by another process.
+
+2018-Oct-17 14:15:13.554217 ERROR   [daemon] Exception: IO error
+2018-Oct-17 14:15:18.043220 WARNING [node_server] [199.247.20.52:36640 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:15:56.293744 INFO    [protocol] New Top Block Detected: 892081
+2018-Oct-17 14:16:41.448804 WARNING [node_server] [104.128.233.34:54267 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:16:54.081072 WARNING [node_server] [199.247.20.52:42758 INC] Our software may be out of date. Please visit: http://latest.turtlecoin.lol for the latest version.
+2018-Oct-17 14:16:56.724891 INFO    [daemon] 
+ _______         _   _       _____      _        
+|__   __|       | | | |     / ____|    (_)      
+   | |_   _ _ __| |_| | ___| |     ___  _ _ __  
+   | | | | | '__| __| |/ _ \ |    / _ \| | '_ \ 
+   | | |_| | |  | |_| |  __/ |___| (_) | | | | |
+   |_|\__ _|_|   \__|_|\___|\_____\___/|_|_| |_|
+
+2018-Oct-17 14:16:56.732863 INFO    [daemon] Welcome to TurtleCoin v0.8.3.1275 ()
+2018-Oct-17 14:16:56.733860 INFO    [daemon] Module folder: turtleservices\TurtleCoind.exe
+2018-Oct-17 14:16:56.735855 INFO    [daemon] Loading Checkpoints for faster initial sync...
+2018-Oct-17 14:16:56.736852 INFO    [daemon] Loaded 156 default checkpoints
+2018-Oct-17 14:16:56.738847 INFO    [RocksDBWrapper] Opening DB in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB
+2018-Oct-17 14:16:56.754780 ERROR   [RocksDBWrapper] DB Error. DB can't be opened in C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB. Error: IO error: Failed to create lock file: C:\Users\Yu-Ming\AppData\Roaming/TurtleCoin/DB/LOCK: The process cannot access the file because it is being used by another process.
+
+2018-Oct-17 14:16:56.760789 ERROR   [daemon] Exception: IO error
