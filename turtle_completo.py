@@ -367,8 +367,6 @@ class Turtle_Completo(App):
                     self.status_text = "SYNC...\n\nLOCAL:       "+str(Local)+"\nNETWORK: "+str(Network)
                     self.root.onlyblocksearchscreen.ids.searchtxbutton.disabled = True
                     self.root.onlyblocksearchscreen.ids.searchblkbutton.disabled = True
-                    self.root.onlyblocksearchscreen.ids.txsearch_display.add_widget(searchAvailable1)
-                    self.root.onlyblocksearchscreen.ids.blksearch_display.add_widget(searchAvailable2)
             except Exception as e:
                 print("something wrong while updating status and txpool and blks")
                 print(e)
