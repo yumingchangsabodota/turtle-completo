@@ -12,7 +12,7 @@ Currently we have only Windows release available, however, since Kivy is a cross
 For those who aren't tech savy, just download the executable from the release:
 [Download the release file here](https://github.com/yumingchangsabodota/turtle-completo/releases)
 
-[Here is a demo video on the project](https://www.youtube.com/watch?v=n_5qlIJxFYo&t=15s)
+[Here is a demo video of the project](https://www.youtube.com/watch?v=n_5qlIJxFYo&t=15s)
 
 The turtle wallet is still under development, it might take longer to release a final product as I can only code on my free time.
 
