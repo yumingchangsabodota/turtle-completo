@@ -5,29 +5,26 @@
 #manage screen names and ids
 ScreenManagement:
 	#screen name variables so the py codes can access widgets inside the screens
-	onlyblockexplorerscreen:onlyblockexplorerscreen 
-	onlyblocksearchscreen:onlyblocksearchscreen
+	blockexplorerscreen:blockexplorerscreen 
+	blocksearchscreen:blocksearchscreen
+	walletscreen:walletscreen
     transition:SlideTransition()
     OnStartScreen:
         id:onstartscreen
         name: 'onstartscreen'
-    OnOpenWalletScreen:
     WalletScreen:
+		id:walletscreen
+		name:'walletscreen'
     TransactionScreen:
-    BlockExplorerWithWalletScreen:
-        id:blockexplorerwithwalletscreen
-        name:'blockexplorerwithwalletscreen'
-    BlockSearchWithWalletScreen:
-        id:blocksearchwithwalletscreen
-        name: 'blocksearchwithwalletscreen'
-    OnlyBlockExplorerScreen:
-        id:onlyblockexplorerscreen
-        name:'onlyblockexplorerscreen'
-    OnlyBlockSearchScreen:
-        id:onlyblocksearchscreen
-        name: 'onlyblocksearchscreen'
-    #SettingScreen:
-    AboutScreen:
+
+    BlockExplorerScreen:
+        id:blockexplorerscreen
+        name:'blockexplorerscreen'
+    BlockSearchScreen:
+        id:blocksearchscreen
+        name: 'blocksearchscreen'
+
+
 #_________________________________________some label properties____________________       
 #invisible label for padding and design purposes    
 <InvLabel@Label>:
@@ -60,6 +57,17 @@ ScreenManagement:
 
 
 #_________________________________________some layout properties____________________	
+#main container for pages
+
+<MyContainer@RelativeLayout>:
+    size_hint:0.9,1
+    pos_hint: {"x":0.1,"y":0}
+    canvas:
+        Color:
+            rgba: 0, 1, 1, 0
+        Rectangle:
+            size: self.size
+
 #long label
 <LongLabel@RelativeLayout>:
     size_hint:1,0.025
@@ -215,6 +223,50 @@ ScreenManagement:
 		name:"rctblk_datetime"
 		pos_hint:{"x":0.775,"y":0}
 		size_hint:0.225,1
+		
+#wallet latest transaction data layout
+<walletTxData>:
+	wtransferType:wtransferType
+	wTxhash_andpaymentId:wTxhash_andpaymentId
+	wTxamount:wTxamount
+	wTxfee:wTxfee
+	wTxtime:wTxtime
+	size_hint_x: 1
+	size_hint_y: None
+	height: 70
+	colors: (0.5, 0.5, 0.5, 0.3)
+	canvas.before:
+		Color:
+			rgba: self.colors
+		Rectangle:
+			size: self.size
+	TableItem:
+		id:wtransferType
+		name:"wtransferType"
+		pos_hint:{"x":0,"y":0}
+		size_hint:0.1,1
+		markup: True
+	TableItem:
+		id:wTxhash_andpaymentId
+		name:"wTxhash_andpaymentId"
+		pos_hint:{"x":0.1,"y":0}
+		size_hint:0.525,1
+	TableItem:
+		id:wTxamount
+		name:"wTxamount"
+		pos_hint:{"x":0.625,"y":0}
+		size_hint:0.125,1
+	TableItem:
+		id:wTxfee
+		name:"wTxfee"
+		pos_hint:{"x":0.75,"y":0}
+		size_hint:0.1,1
+	TableItem:
+		id:wTxtime
+		name:"wTxtime"
+		pos_hint:{"x":0.85,"y":0}
+		size_hint:0.15,1
+	
 		
 #---------------------------------
 #BigLabel
@@ -382,11 +434,11 @@ ScreenManagement:
    
 #daemon status label
 <StatusLabel>:
-    pos_hint:{"x":0,"y":0.875}
-    size_hint:0.1,0.125
+    pos_hint:{"x":0,"y":0.8}
+    size_hint:0.1,0.2
     canvas.before:
         Color:
-            rgba: 0, 0, 0, 0.7
+            rgba: 0, 0, 0, 0.6
         Rectangle:
             size: self.size
     Label:
@@ -398,6 +450,26 @@ ScreenManagement:
         text_size: self.size
         text:app.status_text
 		font_size: 13
+		
+#wallet status label
+<WalletStatusLabel>:
+    pos_hint:{"x":0,"y":0.6}
+    size_hint:0.1,0.2
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0, 0.6
+        Rectangle:
+            size: self.size
+    Label:
+		id:wallet_status_label
+		name:"wallet_status_label"
+        color: 1,1,0,0.8
+        halign:'center'
+        valign:'center'
+        text_size: self.size
+        text:app.wallet_status_text
+		font_size: 13
+
 
 #_________________________________________some button properties____________________    
 #general button properties
@@ -420,34 +492,21 @@ ScreenManagement:
     text:"About"
 	on_release:app.show_popup()
 	
-#<SettingButton@MyButton>:
-    #id:setting
-    #text:"Setting"
-	
 <GoToWalletButton@MyButton>:
     id:gotowallet
     text:"Wallet"
+	on_release: app.ToWallet()
 	
 <RecentBlocksButton@MyButton>:
     id:recentblocks
     text:"Blocks & Pool"
-	on_release:app.root.current = "onlyblockexplorerscreen" 
+	on_release:app.root.current = "blockexplorerscreen" 
 	
 <GoToSearchButton@MyButton>:
     id:gotosearch
     text:"Explore"
-	on_release:app.root.current = "onlyblocksearchscreen"
+	on_release:app.root.current = "blocksearchscreen"
 	
-<RecentBlocksButtonWallet@MyButton>:
-    id:recentblocks
-    text:"Blocks & Pool"
-	on_release:app.root.current = "blockexplorerwithwalletscreen" 
-	
-<GoToSearchButtonWallet@MyButton>:
-    id:gotosearch
-    text:"Explore"
-	on_release:app.root.current = "blocksearchwithwalletscreen"
-
 <MyTxButton@MyButton>:
     id:mytx
     text:"My Tx"
@@ -469,7 +528,7 @@ ScreenManagement:
 #general side bar properties
 <SideBar@BoxLayout>:
     pos_hint:{"x":0,"y":0}
-    size_hint:0.1,0.875
+    size_hint:0.1,0.6
     orientation: 'vertical'
     spacing: 0
     padding: 0
@@ -478,6 +537,19 @@ ScreenManagement:
             rgba: 33/255,38/255,33/255,0.3
         Rectangle:
             size: self.size
+    RecentBlocksButton:
+		on_release:app.root.transition.direction = 'left'
+    GoToSearchButton:
+		on_release:app.root.transition.direction = 'left'
+	GoToWalletButton:
+		on_release:app.root.transition.direction = 'left'
+	InvLabel
+	InvLabel
+    InvLabel
+	InvLabel
+	InvLabel
+    AboutButton
+    ExitButton
             
 #app screen background
 <BackGround@FloatLayout>:
@@ -516,9 +588,14 @@ ScreenManagement:
 	size_hint: 1,None
 	height: self.minimum_height
 
-		
-#__________________________________________________About Popup____________________________
+<WalletTransaction@GridLayout>:
+	cols: 1
+	size_hint: 1,None
+	height: self.minimum_height
 
+		
+#__________________________________________________Popups____________________________
+#About Popup
 <AboutPopup>:
 	size_hint: 0.5,0.5
 	auto_dismiss: False
@@ -542,133 +619,211 @@ ScreenManagement:
 			pos_hint:{"x":0,"y":0}
 			text: 'Close'	
 			on_release: root.dismiss()
+#Wallet prompt
+<WalletPrompt>
+	wallet_path:wallet_path
+	wallet_password1:wallet_password1
+	createWalletName:createWalletName
+	wallet_password2:wallet_password2
+	importWalletName:importWalletName
+	wallet_password3:wallet_password3
+	viewKey:viewKey
+	spendKey:spendKey
+	
+	size_hint: 0.7,0.85
+	auto_dismiss: False
+	title: "Open Your Turtle Wallet"
+	FloatLayout:
+		size_hint:1,1
+		pos_hint:{"x":0,"y":0}
+		
+		BigLabel:
+			color: 1,1,1,1
+			text: "Open an existing wallet"
+			pos_hint:{"x":0.01,"y":0.9}
+			
+		SmallLabel:
+			color: 1,1,1,1
+			size_hint_y:0.02
+			pos_hint:{"x":0.01,"y":0.86}
+			text: app.walletPathError
+			
+		TextInput:
+			id:wallet_path
+			size_hint:0.45,0.05
+			pos_hint:{"x":0.01,"y":0.8}
+			multiline:False
+			background_color: 1,1,1,0.3
+			foreground_color: 0,0,0,1
+			hint_text: "path to .wallet file"
+			hint_text_color: 0,0,0,0.5
+			
+		Button:
+			id:browse_walletPath
+			size_hint:0.07,0.05
+			pos_hint:{"x":0.47,"y":0.8}
+			text: 'browse'
+			on_release: app.browseWalletPath()
+			
+		TextInput:
+			id:wallet_password1
+			size_hint:0.3,0.05
+			pos_hint:{"x":0.56,"y":0.8}
+			multiline:False
+			background_color: 1,1,1,0.4
+			foreground_color: 0,0,0,1
+			password: True
+			hint_text: "wallet password"
+			hint_text_color: 0,0,0,0.5
+		Button:
+			id:open_wallet
+			size_hint:0.1,0.08
+			pos_hint:{"x":0.87,"y":0.8}
+			text: 'Open'	
+			on_release: app.openWallet()
+
+			
+		BigLabel:
+			color: 1,1,1,1
+			text: "Create a new wallet"
+			pos_hint:{"x":0.01,"y":0.6}
+		TextInput:
+			id:createWalletName
+			size_hint:0.3,0.05
+			pos_hint:{"x":0.01,"y":0.5}
+			multiline:False
+			background_color: 1,1,1,0.4
+			foreground_color: 0,0,0,1
+			hint_text: "name your wallet"
+			hint_text_color: 0,0,0,0.5
+			
+		TextInput:
+			id:wallet_password2
+			size_hint:0.3,0.05
+			pos_hint:{"x":0.47,"y":0.5}
+			multiline:False
+			background_color: 1,1,1,0.4
+			foreground_color: 0,0,0,1
+			password: True
+			hint_text: "choose a password"
+			hint_text_color: 0,0,0,0.5
+		
+		Button:
+			id:create_wallet
+			size_hint:0.1,0.08
+			pos_hint:{"x":0.87,"y":0.5}
+			text: 'Create'	
+			on_release: app.createWallet()
+
+		BigLabel:
+			color: 1,1,1,1
+			text: "Import wallet by secrete keys"
+			pos_hint:{"x":0.01,"y":0.32}			
+
+		TextInput:
+			id:importWalletName
+			size_hint:0.3,0.05
+			pos_hint:{"x":0.01,"y":0.22}
+			multiline:False
+			background_color: 1,1,1,0.4
+			foreground_color: 0,0,0,1
+			hint_text: "name your wallet"
+			hint_text_color: 0,0,0,0.5			
+			
+		TextInput:
+			id:wallet_password3
+			size_hint:0.3,0.05
+			pos_hint:{"x":0.45,"y":0.22}
+			multiline:False
+			background_color: 1,1,1,0.4
+			foreground_color: 0,0,0,1
+			password: True
+			hint_text: "choose a password"
+			hint_text_color: 0,0,0,0.5
+			
+		TextInput:
+			id:viewKey
+			size_hint:0.4,0.05
+			pos_hint:{"x":0.01,"y":0.16}
+			multiline:False
+			background_color: 1,1,1,0.3
+			foreground_color: 0,0,0,1
+			hint_text: "Private view key"
+			hint_text_color: 0,0,0,0.5
+			
+		TextInput:
+			id:spendKey
+			size_hint:0.4,0.05
+			pos_hint:{"x":0.45,"y":0.16}
+			multiline:False
+			background_color: 1,1,1,0.3
+			foreground_color: 0,0,0,1
+			hint_text: "Private spend key"
+			hint_text_color: 0,0,0,0.5
+		
+		Button:
+			id:import_wallet
+			size_hint:0.1,0.08
+			pos_hint:{"x":0.87,"y":0.16}
+			text: 'Import'	
+			on_release: app.importWallet()
+			
+		Button:
+			id:close_prompt
+			size_hint:1,0.08
+			pos_hint:{"x":0,"y":0.02}
+			text: 'Close'	
+			on_release: root.dismiss()
+			
+
+#choose wallet file prompt
+<ChooseWalletPrompt>:
+	file_icon_view:file_icon_view
+	size_hint : 0.5,0.65
+	RelativeLayout:
+	    FileChooserIconView:
+			id: file_icon_view
+			title: "Choose your .wallet file"
+			show_hidden: False
+			multiselect: False
+			path: "./"
+			size_hint: 1,0.9
+			pos_hint: {"x":0,"y":0.1}
+			on_selection:app.getWalletPath()
+
+		Button:
+			id: closeChooseFile
+			size_hint:1,0.1
+			pos_hint: {"x":0,"y":0}
+			text: "Cancel"
+			color: 1,1,1,1
+			on_release: root.dismiss()
 	
 #__________________________________________________main____________________________________
 #main app starts from here
 <OnStartScreen>:
     BackGround:
-        MyButton:
-            id:turtlecompleto
-            text:"Turtle Completo\n (under development)"
-            pos_hint: {"x":0.18, "y":0.05}
-            size_hint: 0.2,0.075
-            #on_release:
-                #app.root.transition.direction = 'right'
-                #app.root.current = "blockexplorerwithwalletscreen"
                                 
         MyButton:
-            id:localexploreronly
-            text:"Local Explorer Only"
-            pos_hint: {"x":0.4, "y":0.05}
+            id:turtlecompleto
+            text:"Turtle Completo"
+            pos_hint: {"x":0.25, "y":0.05}
             size_hint: 0.2,0.075
-            on_release:app.start_on_onlyblockexplorer()
+            on_release:app.start_on_blockexplorer()
              
         ExitButton:
-            pos_hint: {"x":0.62, "y":0.05}
+            pos_hint: {"x":0.55, "y":0.05}
             size_hint: 0.2,0.075
 			
 #1       
-<BlockExplorerWithWalletScreen>:
-    BackGround:
-        StatusLabel
-        SideBar:
-            GoToWalletButton
-            MyTxButton
-            RecentBlocksButtonWallet
-            GoToSearchButtonWallet:
-				on_release:
-                    app.root.transition.direction = 'right'
-            InvLabel
-			InvLabel
-			InvLabel
-			InvLabel
-            AboutButton
-            #SettingButton
-            ExitButton
-        RelativeLayout:
-            size_hint:0.9,1
-            pos_hint: {"x":0.1,"y":0}
-            canvas.before:
-                Color:
-                    rgba: 0, 0, 1, 0.5
-                Rectangle:
-                    size: self.size
-			LongLabel:
-				pos_hint:{"x":0,"y":0.975}
-				LongLabelLabel:
-					text:"Transaction Pool"		
-			TxPoolTableHeader:
-				pos_hint:{"x":0,"y":0.95}
-
-			LongLabel:
-				pos_hint:{"x":0,"y":0.55}
-				LongLabelLabel:
-					text:"Recent Blocks"
-			RecentBlockTableHeader:
-				pos_hint:{"x":0,"y":0.525}
-#2					
-<BlockSearchWithWalletScreen>:
-    BackGround:
-        StatusLabel
-        SideBar:
-            GoToWalletButton
-            MyTxButton
-            RecentBlocksButtonWallet:
-				on_release:
-                    app.root.transition.direction = 'left'
-            GoToSearchButtonWallet
-            InvLabel
-			InvLabel
-			InvLabel
-			InvLabel
-            AboutButton
-            #SettingButton
-            ExitButton
-        RelativeLayout:
-            size_hint:0.9,1
-            pos_hint: {"x":0.1,"y":0}
-            canvas:
-                Color:
-                    rgba: 0, 1, 1, 0.5
-                Rectangle:
-                    size: self.size
-			LongLabel:
-				pos_hint:{"x":0,"y":0.975}
-				LongLabelLabel:
-					text:"Look up Transaction"		
-			LongLabel:
-				pos_hint:{"x":0,"y":0.475}
-				LongLabelLabel:
-					text:"Dig into Block"
-
-#3
-<OnlyBlockExplorerScreen>:
+<BlockExplorerScreen>:
 	txp_datalistTemplate:txp_datalistTemplate
 	rctblk_datalistTemplate:rctblk_datalistTemplate
     BackGround:
         StatusLabel
-        SideBar:
-            RecentBlocksButton
-            GoToSearchButton:
-				on_release:app.root.transition.direction = 'left'
-            InvLabel
-            InvLabel
-			InvLabel
-            InvLabel
-			InvLabel
-			InvLabel
-            AboutButton
-            #SettingButton
-            ExitButton
-					
-        RelativeLayout:
-            size_hint:0.9,1
-            pos_hint: {"x":0.1,"y":0}
-            canvas.before:
-                Color:
-                    rgba: 0, 0, 1, 0
-                Rectangle:
-                    size: self.size
+		WalletStatusLabel
+        SideBar				
+        MyContainer:
 			LongLabel:
 				pos_hint:{"x":0,"y":0.975}
 				LongLabelLabel:
@@ -698,9 +853,8 @@ ScreenManagement:
 				DataListTemplate:
 					id:rctblk_datalistTemplate
 					pos_hint:{'x':0,'y':0}
-
-#4
-<OnlyBlockSearchScreen>:
+#2
+<BlockSearchScreen>:
 	txsearch_display:txsearch_display
 	blksearch_display:blksearch_display
 	searchTx_inputText:searchTx_inputText
@@ -710,27 +864,9 @@ ScreenManagement:
 	
     BackGround:
         StatusLabel
-        SideBar:
-            RecentBlocksButton:
-				on_release:app.root.transition.direction = 'right'
-            GoToSearchButton
-            InvLabel
-			InvLabel
-			InvLabel
-			InvLabel
-			InvLabel
-			InvLabel
-            AboutButton
-            #SettingButton
-            ExitButton
-        RelativeLayout:
-            size_hint:0.9,1
-            pos_hint: {"x":0.1,"y":0}
-            canvas:
-                Color:
-                    rgba: 0, 1, 1, 0
-                Rectangle:
-                    size: self.size
+		WalletStatusLabel
+        SideBar
+        MyContainer:
 			LongLabel:
 				pos_hint:{"x":0,"y":0.975}
 				LongLabelLabel:
@@ -751,6 +887,7 @@ ScreenManagement:
 				font_size: 12
 				hint_text: 'Transaction hash'
 				hint_text_color: 0,0,0,0.4
+				cursor_color: 1,1,1,1
 				
 			searchTxButton:
 				id:searchtxbutton
@@ -778,10 +915,162 @@ ScreenManagement:
 				font_size: 12
 				hint_text: 'Block hash, or block height'
 				hint_text_color: 0,0,0,0.4
+				cursor_color: 1,1,1,1
 			searchBlkButton:
 				id:searchblkbutton
 				size_hint: 0.05,0.035
 				pos_hint:{"x":0.95,"y":0}
-				on_release:app.BlkSchThread()
+				on_release:app.BlkSchThread()			
+#3
+<WalletScreen>:
+	publicAddress:publicAddress
+	unlockedbalance:unlockedbalance
+	lockedbalance:lockedbalance
+	wallettransaction:wallettransaction
+	sendTxPaymentId:sendTxPaymentId
+	sendTxAmount:sendTxAmount
+	sendTxAddress:sendTxAddress
+	sendtxbutton:sendtxbutton
+	
+	BackGround:
+		StatusLabel
+		WalletStatusLabel
+        SideBar
+		MyContainer:
+			GridLayout:
+				cols: 2 
+				size_hint:0.95,0.17
+				pos_hint:{"x":0.025,"y":0.82}
+				padding: 10,10,10,10
+				spacing: 5,0
+				canvas.before:
+					Color:
+						rgba: 0,0,0,0.2
+					Rectangle:
+						size: self.size
+						pos: self.pos
+				BigLabel:
+					id:walletAddress
+					text: "Address"
+					bold: True
+					size_hint_x: self.parent.width*0.92-10
+					text_size:self.width,self.height
+				Button:
+					text: "Backup"
+					size_hint_x: self.parent.width*0.08-10
+					size_hint_y: self.parent.height*0.25-10
+				TextInput:
+					id:publicAddress
+					multiline:False
+					readonly: True
+					size_hint:1,None
+					height:30
+					background_color:0,0,0,0.1
+					text: app.publicAddress
+					cursor_blink: False
+					cursor_color: 0,0,0,0
+					text_size:self.width,self.height
+				Button:
+					text: "Change"
+					size_hint_x: self.parent.width*0.08-10
+					size_hint_y: self.parent.height*0.25-10
+				SmallLabel:
+					id:unlockedbalance
+					text: app.unlockedbalance
+					text_size:self.width,self.height
+				Label
+				SmallLabel:
+					id:lockedbalance
+					text: app.lockedbalance
+					text_size:self.width,self.height
+			#this is the layout for sending transaction
+			GridLayout:
+				cols: 1 
+				size_hint:0.95,0.3
+				pos_hint:{"x":0.025,"y":0.51}
+				padding: 10,10,10,10
+				canvas.before:
+					Color:
+						rgba: 0,0,0,0.2
+					Rectangle:
+						size: self.size
+						pos: self.pos
+				BigLabel:
+					text:"Send Transaction"
+					bold: True
+					text_size:self.width,self.height
+				SmallLabel:
+					text: app.walletFeeText
+					text_size:self.width,self.height
+				TextInput:
+					id:sendTxAddress
+					multiline:False
+					size_hint:1,None
+					height:30
+					background_color:0,0,0,0.1
+					hint_text: "Enter destination address"
+					hint_text_color:0,0,0,0.5
+					cursor_color: 1,1,1,1
+				Label:
+					size_hint:1,None
+					height: self.parent.height*0.08-10
+				TextInput:
+					id:sendTxAmount
+					multiline:False
+					size_hint:1,None
+					height:30
+					background_color:0,0,0,0.1
+					hint_text: "Enter Amount"
+					hint_text_color:0,0,0,0.5
+					cursor_color: 1,1,1,1
+				Label:
+					size_hint:1,None
+					height: self.parent.height*0.08-10
+				TextInput:
+					id:sendTxPaymentId
+					multiline:False
+					size_hint:1,None
+					height:30
+					background_color:0,0,0,0.1
+					hint_text: "Enter Payment ID"
+					hint_text_color:0,0,0,0.5
+					cursor_color: 1,1,1,1
+				Label:
+					size_hint:1,None
+					height: self.parent.height*0.08-10
+				Button:
+					id: sendtxbutton
+					size_hint: None, None
+					text: "SEND"
+					height: 30
+					width: 80
+					on_release: app.sendTx()
+			GridLayout:
+				cols: 1 
+				size_hint:0.95,0.07
+				pos_hint:{"x":0.025,"y":0.43}
+				padding: 10,10,10,10
+				canvas.before:
+					Color:
+						rgba: 0,0,0,0.1
+					Rectangle:
+						size: self.size
+						pos: self.pos
+				BigLabel:
+					id:walletAddress
+					text: "Latest Transactions"
+					bold: True
+					text_size:self.width,self.height
 				
-					
+			#need to add Transaction title Label here
+			#this will show the transactions of the wallet			
+			ScrollViewTemplate:
+				id:wallettransaction_scrollview
+				size_hint:0.95,0.42
+				pos_hint:{"x":0.025,"y":0.01}
+				WalletTransaction:
+					id:wallettransaction
+					pos_hint:{'x':0,'y':0}
+
+
+		

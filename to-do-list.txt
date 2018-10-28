@@ -1,0 +1,24 @@
+# before open wallet:
+ - make a config file
+   > stores 1st time using program or not
+   > default .wallet directory
+ - make logger to check error while running program
+ - check config file
+ 
+1. open wallet:
+  - if password is wrong, catch the exception but do not terminate the program. Just pass and show error msg
+2. create wallet
+3. import wallet
+4. look for .wallet file in the defualt directory (maybe to use it as a default path when opening a existing wallet so the use
+does not have to navigate and look for wallet file everytime)
+
+5.Send transaction:
+ * send transaction is working now, but few more things to add:
+ 	- check available balance (send + fee < available balance else don't send)
+ 	- check address valid or not (use address length to check and the initial 4 letters)
+ 	- include payment ID
+ 	- maybe make adjust fee, no less than 0.1
+
+6. backup wallet
+7. change wallet when there is a .wallet file open currently
+8. check how to properly close wallet and daemon thread when closing the program
